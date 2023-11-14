@@ -25,13 +25,13 @@ const Category = () => {
                 subHeading="From 11:00AM to 10:00PM"
             ></SectionTitle>
             <Swiper
-                slidesPerView={4}
+                slidesPerView={3}
                 spaceBetween={10}
                 pagination={{
                     clickable: true,
                 }}
                 modules={[Pagination]}
-                className="mySwiper"
+                className="mySwiper w-full md:w-11/12 lg:w-1/2"
             >
                 {
                     categories.map(category => <SwiperSlide key={category._id}>
