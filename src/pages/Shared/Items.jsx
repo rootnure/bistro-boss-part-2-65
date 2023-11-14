@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import Item from "../../components/Item";
 import MainBtn from "../../components/MainBtn";
 
-const Items = ({ items, isBgWhite }) => {
+const Items = ({ items, isBgWhite = true, btnText = "View Full Menu" }) => {
     return (
         <div>
 
@@ -14,8 +14,8 @@ const Items = ({ items, isBgWhite }) => {
                     ></Item>)
                 }
             </div>
-            <div className="flex justify-center my-6">
-                <MainBtn isBgWhite={isBgWhite}>View Full Menu</MainBtn>
+            <div className="flex justify-center my-8">
+                <MainBtn isBgWhite={isBgWhite}>{btnText}</MainBtn>
             </div>
         </div>
     );
@@ -23,7 +23,8 @@ const Items = ({ items, isBgWhite }) => {
 
 Items.propTypes = {
     items: PropTypes.array.isRequired,
-    isBgWhite: PropTypes.bool
+    isBgWhite: PropTypes.bool,
+    btnText: PropTypes.string
 }
 
 export default Items;
