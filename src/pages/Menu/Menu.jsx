@@ -1,9 +1,13 @@
 import { Helmet } from "react-helmet-async";
 import Cover from "../Shared/Cover";
-import menuImg from "../../assets/menu/banner3.jpg";
 import useMenu from "../../hooks/useMenu";
 import MenuItems from "./MenuItems";
-import sectionBannerBgImg from "../../assets/home/chef-service.jpg";
+import menuBg from "../../assets/menu/menu-bg.png";
+import sectionBannerBgImg from "../../assets/menu/banner3.jpg";
+import dessertBgImg from "../../assets/menu/dessert-bg.jpeg";
+import pizzaBgImg from "../../assets/menu/pizza-bg.jpg";
+import saladBgImg from "../../assets/menu/pizza-bg.jpg";
+import soupBgImg from "../../assets/menu/soup-bg.jpg";
 
 const Menu = () => {
     const [menu, loading] = useMenu();
@@ -17,12 +21,12 @@ const Menu = () => {
             <Helmet>
                 <title>Bistro Boss | Menu</title>
             </Helmet>
-            <div className="space-y-24 mb-24">
+            <main className="space-y-24 pb-24 bg-auto" style={{ backgroundImage: `url(${menuBg})` }}>
                 <Cover
                     isPageCover
-                    bgImg={menuImg}
+                    bgImg={sectionBannerBgImg}
                     title="Menu"
-                    description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur similique ex iure quo magnam magni quos velit inventore corporis dolorum?"
+                    description="Order Your Favourate Food From Our Menu."
                 ></Cover>
                 {/* offer menu */}
                 <MenuItems
@@ -34,7 +38,7 @@ const Menu = () => {
                 ></MenuItems>
                 {/* dessert menu */}
                 <MenuItems
-                    sectionBannerBgImgLink={sectionBannerBgImg}
+                    sectionBannerBgImgLink={dessertBgImg}
                     sectionBannerTitle="Desserts"
                     sectionBannerDescription="Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe soluta dolorem accusantium architecto voluptatum provident? Expedita beatae vero dignissimos sit dicta repellat, ad quaerat veritatis!"
                     loading={loading}
@@ -43,7 +47,7 @@ const Menu = () => {
                 ></MenuItems>
                 {/* pizza menu */}
                 <MenuItems
-                    sectionBannerBgImgLink={sectionBannerBgImg}
+                    sectionBannerBgImgLink={pizzaBgImg}
                     sectionBannerTitle="Pizza"
                     sectionBannerDescription="Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe soluta dolorem accusantium architecto voluptatum provident? Expedita beatae vero dignissimos sit dicta repellat, ad quaerat veritatis!"
                     loading={loading}
@@ -52,7 +56,7 @@ const Menu = () => {
                 ></MenuItems>
                 {/* salads menu */}
                 <MenuItems
-                    sectionBannerBgImgLink={sectionBannerBgImg}
+                    sectionBannerBgImgLink={saladBgImg}
                     sectionBannerTitle="Salad"
                     sectionBannerDescription="Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe soluta dolorem accusantium architecto voluptatum provident? Expedita beatae vero dignissimos sit dicta repellat, ad quaerat veritatis!"
                     loading={loading}
@@ -61,14 +65,14 @@ const Menu = () => {
                 ></MenuItems>
                 {/* soups menu */}
                 <MenuItems
-                    sectionBannerBgImgLink={sectionBannerBgImg}
+                    sectionBannerBgImgLink={soupBgImg}
                     sectionBannerTitle="Soups"
                     sectionBannerDescription="Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe soluta dolorem accusantium architecto voluptatum provident? Expedita beatae vero dignissimos sit dicta repellat, ad quaerat veritatis!"
                     loading={loading}
                     items={soups}
                     sectionBtnText="Order Your Favourate Food"
                 ></MenuItems>
-            </div>
+            </main>
         </>
     );
 };
