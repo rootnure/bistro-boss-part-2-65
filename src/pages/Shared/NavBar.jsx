@@ -4,7 +4,7 @@ import Container from "../../components/Container";
 const NavBar = () => {
     const navItems = <>
         <li><NavLink to="/">Home</NavLink></li>
-        <li><NavLink to="/">Home</NavLink></li>
+        <li><NavLink to="/menu">Menu</NavLink></li>
         <li><NavLink to="/">Home</NavLink></li>
     </>
     return (
