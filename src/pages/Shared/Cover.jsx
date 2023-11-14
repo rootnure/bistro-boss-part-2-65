@@ -16,7 +16,7 @@ const Cover = ({ bgImg, title, description, isPageCover = false }) => {
                         <div className="hero-content text-center p-6 md:p-12 lg:p-20 text-white">
                             <div className="mb-4">
                                 {title ? isPageCover ?
-                                    <h1 className="mb-6 text-7xl font-bold uppercase">{title}</h1> : <h1 className="mb-5 text-5xl font-bold uppercase"><span className="text-6xl">{title[0]}</span>{title.slice(1, title.length)}</h1> : ""}
+                                    <h1 className="font-cinzel mb-6 text-7xl font-bold uppercase">{title}</h1> : <h1 className="font-cinzel mb-5 text-5xl font-bold uppercase"><span className="text-6xl">{title[0]}</span>{title.slice(1, title.length)}</h1> : ""}
                                 {description ?
                                     <p>{description}</p> : ""}
                             </div>
