@@ -11,6 +11,13 @@ import categoryImg5 from "../../assets/home/slide5.jpg";
 import SectionTitle from '../../components/SectionTitle';
 
 const Category = () => {
+    const categories = [
+        { _id: "bbrCat001", img: categoryImg1, title: "Salads" },
+        { _id: "bbrCat002", img: categoryImg2, title: "Pizzas" },
+        { _id: "bbrCat003", img: categoryImg3, title: "Soups" },
+        { _id: "bbrCat004", img: categoryImg4, title: "Desserts" },
+        { _id: "bbrCat005", img: categoryImg5, title: "Salads" }
+    ]
     return (
         <section>
             <SectionTitle
@@ -26,26 +33,12 @@ const Category = () => {
                 modules={[Pagination]}
                 className="mySwiper"
             >
-                <SwiperSlide>
-                    <img src={categoryImg1} alt="" className='w-fit mx-auto' />
-                    <h3 className='text-4xl uppercase text-center -mt-16 mb-12 text-white font-medium [text-shadow:_4px_4px_0_rgb(0_0_0_/_40%)]'>Salads</h3>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img src={categoryImg2} alt="" className='w-fit mx-auto' />
-                    <h3 className='text-4xl uppercase text-center -mt-16 mb-12 text-white font-medium [text-shadow:_4px_4px_0_rgb(0_0_0_/_40%)]'>Pizzas</h3>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img src={categoryImg3} alt="" className='w-fit mx-auto' />
-                    <h3 className='text-4xl uppercase text-center -mt-16 mb-12 text-white font-medium [text-shadow:_4px_4px_0_rgb(0_0_0_/_40%)]'>Soups</h3>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img src={categoryImg4} alt="" className='w-fit mx-auto' />
-                    <h3 className='text-4xl uppercase text-center -mt-16 mb-12 text-white font-medium [text-shadow:_4px_4px_0_rgb(0_0_0_/_40%)]'>Dessert</h3>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img src={categoryImg5} alt="" className='w-fit mx-auto' />
-                    <h3 className='text-4xl uppercase text-center -mt-16 mb-12 text-white font-medium [text-shadow:_4px_4px_0_rgb(0_0_0_/_40%)]'>Salads</h3>
-                </SwiperSlide>
+                {
+                    categories.map(category => <SwiperSlide key={category._id}>
+                        <img src={category.img} alt="" className='w-fit mx-auto' />
+                        <h3 className='text-lg md:text-2xl lg:text-4xl uppercase text-center -mt-8 md:-mt-12 lg:-mt-16 mb-12 text-white font-medium [text-shadow:_2px_2px_0_rgb(0_0_0_/_40%)] lg:[text-shadow:_4px_4px_0_rgb(0_0_0_/_40%)]'>{category.title}</h3>
+                    </SwiperSlide>)
+                }
             </Swiper>
         </section>
     );

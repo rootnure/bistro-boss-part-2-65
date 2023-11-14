@@ -9,7 +9,7 @@ const ChefRecommends = () => {
                 heading="Chef Recommends"
                 subHeading="Should Try"
             ></SectionTitle>
-            <div className="grid grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div className="card bg-base-100 rounded-lg">
                     <figure className="h-60">
                         <img src={chefRecImg} alt="Shoes" className="min-w-full min-h-full" />

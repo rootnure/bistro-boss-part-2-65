@@ -6,7 +6,7 @@ const Items = ({ items, isBgWhite }) => {
     return (
         <div>
 
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-2">
                 {
                     items.map(item => <Item
                         key={item._id}
