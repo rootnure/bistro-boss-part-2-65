@@ -5,5 +5,5 @@
 @tailwind utilities;
 
 .react-tabs__tab--selected {
-    @apply !text-red-500 !border-red-500;
+    @apply !text-blue-500 !border-blue-500;
 }

@@ -10,7 +10,8 @@ import "./OrderTabPaginationSwiperStyles.css";
 
 
 const OrderTab = ({ foodItems }) => {
-    const pageCount = Math.ceil(foodItems.length / 6);
+    const dataPerPage = window.screen.width > 1400 ? 8 : 6;
+    const pageCount = Math.ceil(foodItems.length / dataPerPage);
     const pages = [...Array(pageCount).keys()];
     console.log(pages);
     const pagination = {
@@ -28,9 +29,9 @@ const OrderTab = ({ foodItems }) => {
             >
                 {
                     pages.map(page => <SwiperSlide key={page}>
-                        <div className="grid grid-cols-3 gap-4 my-16">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 my-16">
                             {
-                                foodItems.slice(page * 6, (page + 1) * 6).map(item => <FoodCard key={item._id} item={item}></FoodCard>)
+                                foodItems.slice(page * dataPerPage, (page + 1) * dataPerPage).map(item => <FoodCard key={item._id} item={item}></FoodCard>)
                             }
                         </div>
                     </SwiperSlide>)

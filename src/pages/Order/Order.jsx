@@ -41,7 +41,7 @@ const Order = () => {
                     <Container>
                         <Tabs defaultIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
                             <div className="text-center">
-                                <TabList className="space-x-8 text-xl font-bold border-b border-gray-400 uppercase">
+                                <TabList className="md:space-x-8 text-sm md:tex-base lg:text-xl font-bold border-b border-gray-400 uppercase">
                                     {
                                         categories.map(singleCategory => <Tab key={singleCategory}>{singleCategory}</Tab>)
                                     }
