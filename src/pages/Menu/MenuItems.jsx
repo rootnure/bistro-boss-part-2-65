@@ -26,6 +26,7 @@ const MenuItems = ({ sectionBannerBgImgLink, sectionBannerTitle, sectionBannerDe
                         items={items}
                         isBgWhite
                         btnText={sectionBtnText}
+                        title={sectionBannerTitle}
                     ></Items>}
             </Container>
         </section>

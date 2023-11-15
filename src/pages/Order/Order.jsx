@@ -8,10 +8,13 @@ import Container from "../../components/Container";
 import useMenu from "../../hooks/useMenu";
 import Loading from "../Shared/Loading";
 import OrderTab from "./OrderTab";
+import { useParams } from "react-router-dom";
 
 const Order = () => {
     const [tabIndex, setTabIndex] = useState(0);
     const [menu, loading] = useMenu();
+    const { category } = useParams();
+    console.log(category);
     const drinks = menu.filter(item => item.category.toLowerCase() === "drinks");
     const desserts = menu.filter(item => item.category.toLowerCase() === "dessert");
     const pizzas = menu.filter(item => item.category.toLowerCase() === "pizza");

@@ -39,7 +39,7 @@ const Menu = () => {
                 {/* dessert menu */}
                 <MenuItems
                     sectionBannerBgImgLink={dessertBgImg}
-                    sectionBannerTitle="Desserts"
+                    sectionBannerTitle="dessert"
                     sectionBannerDescription="Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe soluta dolorem accusantium architecto voluptatum provident? Expedita beatae vero dignissimos sit dicta repellat, ad quaerat veritatis!"
                     loading={loading}
                     items={desserts}
@@ -48,16 +48,16 @@ const Menu = () => {
                 {/* pizza menu */}
                 <MenuItems
                     sectionBannerBgImgLink={pizzaBgImg}
-                    sectionBannerTitle="Pizza"
+                    sectionBannerTitle="pizza"
                     sectionBannerDescription="Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe soluta dolorem accusantium architecto voluptatum provident? Expedita beatae vero dignissimos sit dicta repellat, ad quaerat veritatis!"
                     loading={loading}
                     items={pizzas}
                     sectionBtnText="Order Your Favourate Food"
                 ></MenuItems>
-                {/* salads menu */}
+                {/* salad menu */}
                 <MenuItems
                     sectionBannerBgImgLink={saladBgImg}
-                    sectionBannerTitle="Salad"
+                    sectionBannerTitle="salad"
                     sectionBannerDescription="Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe soluta dolorem accusantium architecto voluptatum provident? Expedita beatae vero dignissimos sit dicta repellat, ad quaerat veritatis!"
                     loading={loading}
                     items={salads}
@@ -66,7 +66,7 @@ const Menu = () => {
                 {/* soups menu */}
                 <MenuItems
                     sectionBannerBgImgLink={soupBgImg}
-                    sectionBannerTitle="Soups"
+                    sectionBannerTitle="soup"
                     sectionBannerDescription="Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe soluta dolorem accusantium architecto voluptatum provident? Expedita beatae vero dignissimos sit dicta repellat, ad quaerat veritatis!"
                     loading={loading}
                     items={soups}

@@ -5,7 +5,7 @@ import { FaBars } from "react-icons/fa";
 const NavBar = () => {
     const navItems = <>
         <li><NavLink to="/">Home</NavLink></li>
-        <li><NavLink to="/menu">Menu</NavLink></li>
+        <li><NavLink to="/menu">Our Menu</NavLink></li>
         <li><NavLink to="/order">Order Now</NavLink></li>
     </>
     return (

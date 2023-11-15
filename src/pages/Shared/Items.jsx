@@ -1,8 +1,9 @@
 import PropTypes from "prop-types";
 import MainBtn from "../../components/MainBtn";
 import Item from "./Item";
+import { Link } from "react-router-dom";
 
-const Items = ({ items, isBgWhite = true, btnText = "View Full Menu" }) => {
+const Items = ({ items, isBgWhite = true, btnText = "View Full Menu", title = "salad" }) => {
     return (
         <div>
 
@@ -15,7 +16,7 @@ const Items = ({ items, isBgWhite = true, btnText = "View Full Menu" }) => {
                 }
             </div>
             <div className="flex justify-center my-8">
-                <MainBtn isBgWhite={isBgWhite}>{btnText}</MainBtn>
+                <Link to={`/order/${title}`}><MainBtn isBgWhite={isBgWhite}>{btnText}</MainBtn></Link>
             </div>
         </div>
     );
@@ -24,7 +25,8 @@ const Items = ({ items, isBgWhite = true, btnText = "View Full Menu" }) => {
 Items.propTypes = {
     items: PropTypes.array.isRequired,
     isBgWhite: PropTypes.bool,
-    btnText: PropTypes.string
+    btnText: PropTypes.string,
+    title: PropTypes.string
 }
 
 export default Items;

@@ -9,7 +9,7 @@ const Item = ({ item }) => {
                 <h3 className="uppercase font-bold">{name}--------------</h3>
                 <p>{recipe}</p>
             </div>
-            <p className="text-yellow-500 font-bold">${price.toFixed(2)}</p>
+            <p className="text-yellow-600 font-bold">${price.toFixed(2)}</p>
         </div>
     );
 };
