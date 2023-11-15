@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
 import Container from "../../components/Container";
-import SectionTitle from "../../components/SectionTitle";
+import SectionTitle from "../Shared/SectionTitle";
 import Items from "../Shared/Items";
-import Loading from "../../components/Loading";
+import Loading from "../Shared/Loading";
 import Cover from "../Shared/Cover";
 
 const MenuItems = ({ sectionBannerBgImgLink, sectionBannerTitle, sectionBannerDescription, sectionHeading, sectionSubHeading, loading, items, sectionBtnText }) => {

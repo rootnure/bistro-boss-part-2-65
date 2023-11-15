@@ -1,4 +1,4 @@
-import SectionTitle from '../../components/SectionTitle';
+import SectionTitle from '../Shared/SectionTitle';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FaQuoteLeft } from "react-icons/fa";
 

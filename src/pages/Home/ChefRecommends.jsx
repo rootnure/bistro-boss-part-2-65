@@ -1,8 +1,15 @@
-import SectionTitle from "../../components/SectionTitle";
+import SectionTitle from "../Shared/SectionTitle";
 import chefRecImg from "../../assets/home/slide1.jpg";
-import MainBtn from "../../components/MainBtn";
+import FoodCard from "../Shared/FoodCard";
 
 const ChefRecommends = () => {
+
+    const recommends = [
+        { _id: "1", image: chefRecImg, name: "Caeser Salad", recipe: "Lettuce, Eggs, Parmesan Cheese, Chicken Breast Fillets." },
+        { _id: "2", image: chefRecImg, name: "Caeser Salad", recipe: "Lettuce, Eggs, Parmesan Cheese, Chicken Breast Fillets." },
+        { _id: "3", image: chefRecImg, name: "Caeser Salad", recipe: "Lettuce, Eggs, Parmesan Cheese, Chicken Breast Fillets." },
+    ]
+
     return (
         <section>
             <SectionTitle
@@ -10,42 +17,9 @@ const ChefRecommends = () => {
                 subHeading="Should Try"
             ></SectionTitle>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div className="card bg-base-100 rounded-lg">
-                    <figure className="h-60">
-                        <img src={chefRecImg} alt="Shoes" className="min-w-full min-h-full" />
-                    </figure>
-                    <div className="card-body bg-gray-100 items-center text-center rounded-b-lg">
-                        <h2 className="card-title text-2xl font-bold">Caeser Salad</h2>
-                        <p>Lettuce, Eggs, Parmesan Cheese, Chicken Breast Fillets.</p>
-                        <div className="card-actions">
-                            <MainBtn isBgWhite>Add To Cart</MainBtn>
-                        </div>
-                    </div>
-                </div>
-                <div className="card bg-base-100 rounded-lg">
-                    <figure className="h-60">
-                        <img src={chefRecImg} alt="Shoes" className="min-w-full min-h-full" />
-                    </figure>
-                    <div className="card-body bg-gray-100 items-center text-center rounded-b-lg">
-                        <h2 className="card-title text-2xl font-bold ">Caeser Salad</h2>
-                        <p>Lettuce, Eggs, Parmesan Cheese, Chicken Breast Fillets.</p>
-                        <div className="card-actions">
-                            <MainBtn isBgWhite>Add To Cart</MainBtn>
-                        </div>
-                    </div>
-                </div>
-                <div className="card bg-base-100 rounded-lg">
-                    <figure className="h-60">
-                        <img src={chefRecImg} alt="Shoes" className="min-w-full min-h-full" />
-                    </figure>
-                    <div className="card-body bg-gray-100 items-center text-center rounded-b-lg">
-                        <h2 className="card-title text-2xl font-bold">Caeser Salad</h2>
-                        <p>Lettuce, Eggs, Parmesan Cheese, Chicken Breast Fillets.</p>
-                        <div className="card-actions">
-                            <MainBtn isBgWhite>Add To Cart</MainBtn>
-                        </div>
-                    </div>
-                </div>
+                {
+                    recommends.map(item => <FoodCard key={item._id} item={item}></FoodCard>)
+                }
             </div>
         </section>
     );

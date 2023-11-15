@@ -1,4 +1,4 @@
-import SectionTitle from "../../components/SectionTitle";
+import SectionTitle from "../Shared/SectionTitle";
 import Items from "../Shared/Items";
 import useMenu from "../../hooks/useMenu";
 

@@ -8,7 +8,7 @@ import categoryImg2 from "../../assets/home/slide2.jpg";
 import categoryImg3 from "../../assets/home/slide3.jpg";
 import categoryImg4 from "../../assets/home/slide4.jpg";
 import categoryImg5 from "../../assets/home/slide5.jpg";
-import SectionTitle from '../../components/SectionTitle';
+import SectionTitle from '../Shared/SectionTitle';
 
 const Category = () => {
     const categories = [
