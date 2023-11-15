@@ -1,0 +1,7 @@
+.swiper-pagination-bullet {
+    @apply w-12 h-12 text-center leading-[48px] text-2xl text-black font-medium opacity-100 bg-black bg-opacity-20;
+}
+
+.swiper-pagination-bullet-active {
+    @apply text-white bg-blue-600;
+}
