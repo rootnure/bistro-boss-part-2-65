@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
-import Item from "../../components/Item";
 import MainBtn from "../../components/MainBtn";
+import Item from "./Item";
 
 const Items = ({ items, isBgWhite = true, btnText = "View Full Menu" }) => {
     return (
