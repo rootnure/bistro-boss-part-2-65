@@ -4,13 +4,13 @@ import { FaBars } from "react-icons/fa";
 
 const NavBar = () => {
     const navItems = <>
-        <li><NavLink to="/">Home</NavLink></li>
-        <li><NavLink to="/menu">Our Menu</NavLink></li>
-        <li><NavLink to="/order">Order Now</NavLink></li>
+        <li><NavLink className="hover:text-white hover:scale-110 duration-75" to="/">Home</NavLink></li>
+        <li><NavLink className="hover:text-white hover:scale-110 duration-75" to="/menu">Our Menu</NavLink></li>
+        <li><NavLink className="hover:text-white hover:scale-110 duration-75" to="/order">Order Now</NavLink></li>
     </>
     return (
         <>
-            <div className="bg-black opacity-80 text-white fixed top-0 z-10 left-0 right-0">
+            <div className="bg-black bg-opacity-40 backdrop-blur text-white fixed top-0 z-10 left-0 right-0">
                 <Container>
                     <div className="navbar">
                         <div className="navbar-start">

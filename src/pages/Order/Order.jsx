@@ -11,10 +11,14 @@ import OrderTab from "./OrderTab";
 import { useParams } from "react-router-dom";
 
 const Order = () => {
-    const [tabIndex, setTabIndex] = useState(0);
-    const [menu, loading] = useMenu();
+    const categories = ["salad", "pizza", "soups", "desserts", "drinks"];
+
     const { category } = useParams();
-    console.log(category);
+    const initialIndex = categories.indexOf(category) < 0 ? 0 : categories.indexOf(category);
+
+    const [tabIndex, setTabIndex] = useState(initialIndex);
+
+    const [menu, loading] = useMenu();
     const drinks = menu.filter(item => item.category.toLowerCase() === "drinks");
     const desserts = menu.filter(item => item.category.toLowerCase() === "dessert");
     const pizzas = menu.filter(item => item.category.toLowerCase() === "pizza");
@@ -23,7 +27,7 @@ const Order = () => {
     return (
         <>
             <Helmet>
-                <title>Bistro Boss | Order</title>
+                <title>Bistro Boss | Order {`| ${categories[tabIndex].toUpperCase()}`}</title>
             </Helmet>
             <main className="space-y-24 pb-24">
                 <Cover
@@ -37,12 +41,10 @@ const Order = () => {
                     <Container>
                         <Tabs defaultIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
                             <div className="text-center">
-                                <TabList className="space-x-8 text-xl font-bold border-b-2 border-gray-400">
-                                    <Tab>Salad</Tab>
-                                    <Tab>Pizza</Tab>
-                                    <Tab>Soups</Tab>
-                                    <Tab>Desserts</Tab>
-                                    <Tab>Drinks</Tab>
+                                <TabList className="space-x-8 text-xl font-bold border-b-2 border-gray-400 uppercase">
+                                    {
+                                        categories.map(singleCategory => <Tab key={singleCategory}>{singleCategory}</Tab>)
+                                    }
                                 </TabList>
                             </div>
                             <TabPanel>

@@ -23,6 +23,10 @@ export const router = createBrowserRouter([
             {
                 path: "order/:category",
                 element: <Order></Order>
+            },
+            {
+                path: "order",
+                element: <Order></Order>
             }
         ]
     },

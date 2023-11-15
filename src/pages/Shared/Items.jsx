@@ -3,7 +3,7 @@ import MainBtn from "../../components/MainBtn";
 import Item from "./Item";
 import { Link } from "react-router-dom";
 
-const Items = ({ items, isBgWhite = true, btnText = "View Full Menu", title = "salad" }) => {
+const Items = ({ items, isBgWhite = true, btnText = "View Full Menu", title }) => {
     return (
         <div>
 
@@ -16,7 +16,7 @@ const Items = ({ items, isBgWhite = true, btnText = "View Full Menu", title = "s
                 }
             </div>
             <div className="flex justify-center my-8">
-                <Link to={`/order/${title}`}><MainBtn isBgWhite={isBgWhite}>{btnText}</MainBtn></Link>
+                <Link to={title ? `/order/${title}` : "/order"}><MainBtn isBgWhite={isBgWhite}>{btnText}</MainBtn></Link>
             </div>
         </div>
     );
