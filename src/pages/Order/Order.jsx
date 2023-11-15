@@ -11,7 +11,7 @@ import OrderTab from "./OrderTab";
 import { useParams } from "react-router-dom";
 
 const Order = () => {
-    const categories = ["salad", "pizza", "soups", "desserts", "drinks"];
+    const categories = ["salad", "pizza", "soup", "dessert", "drink"];
 
     const { category } = useParams();
     const initialIndex = categories.indexOf(category) < 0 ? 0 : categories.indexOf(category);
@@ -41,7 +41,7 @@ const Order = () => {
                     <Container>
                         <Tabs defaultIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
                             <div className="text-center">
-                                <TabList className="space-x-8 text-xl font-bold border-b-2 border-gray-400 uppercase">
+                                <TabList className="space-x-8 text-xl font-bold border-b border-gray-400 uppercase">
                                     {
                                         categories.map(singleCategory => <Tab key={singleCategory}>{singleCategory}</Tab>)
                                     }
